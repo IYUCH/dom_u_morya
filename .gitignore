@@ -1,6 +1,7 @@
 *.pyc
 .idea/*
 db.sqlite3
+/media
 
 __pycache__/
 /proba.py

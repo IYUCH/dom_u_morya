@@ -7,6 +7,7 @@ class House(models.Model):
     price = models.IntegerField("цена")
     description = models.TextField('описание')
     date = models.DateField('дата', default=date.today)
+    photo = models.ImageField('фотография', upload_to='houses/photos', default='', blank=True)
 
     class Meta:
         verbose_name = 'дом'

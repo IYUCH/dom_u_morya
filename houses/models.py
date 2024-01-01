@@ -1,10 +1,12 @@
 from django.db import models
+from datetime import date
 
 
 class House(models.Model):
     name = models.CharField('название', max_length=50)
     price = models.IntegerField("цена")
     description = models.TextField('описание')
+    date = models.DateField('дата', default=date.today)
 
     class Meta:
         verbose_name = 'дом'

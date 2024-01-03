@@ -1,11 +1,7 @@
+{% extends 'index.html' %}
 {% load thumbnail %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Дом у моря</title>
-</head>
-<body>
+
+{% block application %}
     <h1>Список домов</h1>
     {% for house in houses %}
         <div>
@@ -20,5 +16,4 @@
 
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}

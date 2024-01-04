@@ -9,10 +9,15 @@
         <div>{{ house.price }}</div>
         <div>{{ house.description }}</div>
         <div>{{ house.date }}</div>
-
         {% thumbnail house.photo '650x400' crop='center' as im %}
             <img src="{{ im.url }}" alt="Дом {{ house.name }}">
         {% endthumbnail %}
-
     </div>
+
+    <h2>Заявка</h2>
+    <form method="post">
+        {{ form.as_p }}
+        <button type="submit">Отправить заявку</button>
+    </form>
+
 {% endblock %}

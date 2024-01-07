@@ -21,7 +21,7 @@ def houses_list(request):
 
 
 def house_detail(request, house_id):
-    house = get_object_or_404(House, id=house_id)
+    house = get_object_or_404(House, id=house_id, active=True)
     form = OrderForm(request.POST or None, initial={'house': house})
 
     if request.method == 'POST':

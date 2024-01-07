@@ -8,6 +8,7 @@ class House(models.Model):
     description = models.TextField('описание')
     date = models.DateField('дата', default=date.today)
     photo = models.ImageField('фотография', upload_to='houses/photos', default='', blank=True)
+    active = models.BooleanField('активен', default=True)
 
     class Meta:
         verbose_name = 'дом'

@@ -7,7 +7,7 @@ from houses.forms import HousesFilterForm
 
 
 def houses_list(request):
-    houses = House.objects.all()
+    houses = House.objects.filter(active=True)
     form = HousesFilterForm(request.GET)
     if form.is_valid():
         if form.cleaned_data['min_price']:

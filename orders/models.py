@@ -11,7 +11,7 @@ class Order(models.Model):
     class Meta:
         verbose_name = 'заявка'
         verbose_name_plural = 'заявки'
-        ordering = ['date']
+        ordering = ['-date']
 
     def __str__(self):
         return f'{self.name}, тел. {self.phone}, от {self.date:%d.%m.%Y}'

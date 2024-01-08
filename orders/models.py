@@ -7,3 +7,11 @@ class Order(models.Model):
     name = models.CharField('имя', max_length=50)
     phone = models.CharField('телефон', max_length=50)
     date = models.DateTimeField('дата', auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'заявка'
+        verbose_name_plural = 'заявки'
+        ordering = ['date']
+
+    def __str__(self):
+        return f'{self.name}, тел. {self.phone}, от {self.date:%d.%m.%Y}'

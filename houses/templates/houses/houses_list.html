@@ -1,5 +1,5 @@
 {% extends 'index.html' %}
-{% load thumbnail %}
+{% load thumbnail humanize %}
 
 {% block application %}
     <h1>Список домов</h1>
@@ -12,7 +12,7 @@
     {% for house in houses %}
         <div>
             <h2><a href="{% url 'house' house_id=house.id %}">{{ house.name }}</a></h2>
-            <div>{{ house.price }}</div>
+            <div>{{ house.price | intcomma}}</div>
             <div>{{ house.description }}</div>
             <div>{{ house.date }}</div>
 

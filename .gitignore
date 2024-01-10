@@ -6,3 +6,4 @@ db.sqlite3
 
 __pycache__/
 /proba.py
+/dom_u_morya/local_settings.py

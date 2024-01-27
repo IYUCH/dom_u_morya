@@ -2,28 +2,32 @@
 {% load thumbnail humanize %}
 
 {% block application %}
-    <a href="{% url 'home' %}">Главная</a>
 
-    <div>
-        <h2>{{ house.name }}</h2>
-        <div>{{ house.price | intcomma }}</div>
-        <div>{{ house.description }}</div>
-        <div>{{ house.date }}</div>
-        {% thumbnail house.photo '650x400' crop='center' as im %}
-            <img src="{{ im.url }}" alt="Дом {{ house.name }}">
-        {% endthumbnail %}
+    <div class="house-detail">
+
+        <div class="house">
+            <h2 class="house-name">{{ house.name }}</h2>
+            <div class="price">{{ house.price | intcomma }}</div>
+            <div class="description">{{ house.description }}</div>
+            {% thumbnail house.photo '650x400' crop='center' as im %}
+                <img src="{{ im.url }}" alt="Дом {{ house.name }}">
+            {% endthumbnail %}
+        </div>
+
+
+    <div class="order">
+        <h2>Заявка</h2>
+
+        {% if sent %}
+            <p>Спасибо! Ваша заявка принята.</p>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Отправить заявку</button>
+        </form>
     </div>
 
-    <h2>Заявка</h2>
-
-    {% if sent %}
-        <p>Спасибо! Ваша заявка принята.</p>
-    {% endif %}
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Отправить заявку</button>
-    </form>
-
+    </div>
 {% endblock %}

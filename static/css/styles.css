@@ -145,32 +145,6 @@ footer {
  * Информация о доме
  */
 
-.house-name {
-    font-size: 28px;
-    line-height: 28px;
-    height: 28px;
-    margin-bottom: 20px;
-    color: #5a5a5a;
-    font-weight: normal;
-    text-align: left;
-    text-transform: uppercase;
-    padding: 0;
-    display: block;
-}
-
-.house-name .price {
-    font-weight: bold;
-    border: 2px solid #5a5a5a;
-    color: #5a5a5a;
-    font-size: 18px;
-    line-height: 24px;
-    height: 24px;
-    padding: 0 10px;
-    margin-left: 10px;
-    display: block;
-    float: right;
-}
-
 .house-detail {
     width: 1024px;
     margin: 0 auto 20px auto;
@@ -178,28 +152,47 @@ footer {
 
 .house-detail .house {
     float: left;
-    width: 675px;
+    width: 650px;
 }
 
-.house-detail .order {
-    float: left;
-    margin-left: 20px;
+.house-name {
+    font-size: 28px;
+    line-height: 28px;
+    color: #5a5a5a;
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline;
 }
 
-.house-detail .house img {
-    width: 675px;
-    height: 350px;
-    display: block;
-    margin-bottom: 10px;
+.house-detail .house .price {
+    font-weight: bold;
+    border: 2px solid #5a5a5a;
+    color: #5a5a5a;
+    font-size: 18px;
+    line-height: 24px;
+    height: 24px;
+    padding: 0 10px;
+    float: right;
 }
 
 .house-detail .house .description {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 40px;
+    margin: 20px auto;
 }
 
+.house-detail .house img {
+    /*width: 675px;*/
+    /*height: 350px;*/
+    /*display: block;*/
+    /*margin-bottom: 10px;*/
+}
+
+
 .house-detail .order {
+    float: left;
+    margin-left: 20px;
     background-color: #eeedec;
     width: 289px;
     padding: 5px 20px;

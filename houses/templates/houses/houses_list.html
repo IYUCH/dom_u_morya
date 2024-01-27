@@ -15,9 +15,6 @@
             <div class="house">
                 <h2><a href="{% url 'house' house_id=house.id %}">{{ house.name }}</a></h2>
                 <div class="price">{{ house.price | intcomma}}</div>
-{#                <div>{{ house.description }}</div>#}
-{#                <div>{{ house.date }}</div>#}
-
                 {% thumbnail house.photo '325x200' crop='center' as im %}
                     <img src="{{ im.url }}" alt="Дом {{ house.name }}">
                 {% endthumbnail %}

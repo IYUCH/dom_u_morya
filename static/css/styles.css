@@ -195,7 +195,7 @@ footer {
     margin-left: 20px;
     background-color: #eeedec;
     width: 289px;
-    padding: 5px 20px;
+    padding: 20px;
 }
 
 .house-detail .order h2 {
@@ -203,6 +203,7 @@ footer {
     line-height: 18px;
     height: 18px;
     color: #5a5a5a;
+    margin: 0;
 }
 
 .order-form p {
@@ -220,6 +221,10 @@ footer {
     border: 1px solid #ccc;
     font-size: 14px;
 }
+
+/*.order-form input[type=checkbox] {*/
+/*    float: left;*/
+/*}*/
 
 .order-form button[type=submit] {
     width: 285px;

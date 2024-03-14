@@ -1,9 +1,17 @@
 *.pyc
-.idea/*
+.idea/
 db.sqlite3
-/media
-/cache
+/media/
+/cache/
+local_settings.py
+temp.py  # добавлено мной
 
-__pycache__/
-/proba.py
-/dom_u_morya/local_settings.py
+# на хостинге
+.venv/
+/__pycache__/
+env/
+public_html/
+tmp/
+
+.envrc
+passenger_wsgi.py

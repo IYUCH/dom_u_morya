@@ -15,19 +15,19 @@
         </div>
 
 
-    <div class="order">
-        <h2>Заявка</h2>
+        <div class="order">
+            <h2>Заявка</h2>
 
-        {% if sent %}
-            <p>Спасибо! Ваша заявка принята.</p>
-        {% endif %}
+            {% if sent %}
+                <p>Спасибо! Ваша заявка принята.</p>
+            {% endif %}
 
-        <form class="order-form" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Отправить заявку</button>
-        </form>
-    </div>
+            <form class="order-form" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
 
     </div>
 {% endblock %}
